@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Diagram C4 Model</title>
+  <desc id="desc">C4 container diagram untuk user, UI, API, broker, worker, dan database.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#dce6ee" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#0f6d7a"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="#f7f9fb"/>
+  <rect width="960" height="540" rx="28" fill="url(#grid)" opacity="0.72"/>
+  <text x="72" y="78" fill="#0a4f59" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">C4 Model - Container Diagram</text>
+  <text x="72" y="112" fill="#637083" font-family="Segoe UI, Arial, sans-serif" font-size="16">Gambar container utama dan beri label pada setiap panah komunikasi.</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <circle cx="112" cy="288" r="42" fill="#dff3f5" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="112" y="294" fill="#0a4f59" font-size="16" font-weight="700" text-anchor="middle">User</text>
+    <rect x="240" y="154" width="640" height="288" rx="22" fill="#ffffff" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="268" y="190" fill="#0a4f59" font-size="18" font-weight="700">System Boundary: SaaS Kontrak</text>
+    <rect x="292" y="250" width="128" height="64" rx="12" fill="#eef4f8" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="356" y="278" fill="#0a4f59" font-size="15" font-weight="700" text-anchor="middle">Svelte UI</text>
+    <text x="356" y="300" fill="#637083" font-size="12" text-anchor="middle">browser app</text>
+    <rect x="488" y="250" width="128" height="64" rx="12" fill="#eef4f8" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="552" y="278" fill="#0a4f59" font-size="15" font-weight="700" text-anchor="middle">Go API</text>
+    <text x="552" y="300" fill="#637083" font-size="12" text-anchor="middle">auth + submit</text>
+    <rect x="696" y="212" width="122" height="58" rx="12" fill="#eef4f8" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="757" y="247" fill="#0a4f59" font-size="15" font-weight="700" text-anchor="middle">Database</text>
+    <rect x="488" y="354" width="128" height="58" rx="12" fill="#eef4f8" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="552" y="389" fill="#0a4f59" font-size="15" font-weight="700" text-anchor="middle">RabbitMQ</text>
+    <rect x="696" y="354" width="122" height="58" rx="12" fill="#eef4f8" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="757" y="389" fill="#0a4f59" font-size="15" font-weight="700" text-anchor="middle">Worker</text>
+  </g>
+  <g stroke="#0f6d7a" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arrow)">
+    <path d="M154 288H292"/>
+    <path d="M420 282H488"/>
+    <path d="M616 268L696 242"/>
+    <path d="M552 314V354"/>
+    <path d="M616 383H696"/>
+    <path d="M757 354V270"/>
+  </g>
+  <g fill="#637083" font-family="Segoe UI, Arial, sans-serif" font-size="12">
+    <text x="190" y="274">HTTPS</text>
+    <text x="438" y="269">API call</text>
+    <text x="632" y="248">read/write</text>
+    <text x="562" y="338">publish</text>
+    <text x="640" y="371">consume</text>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Diagram Layered Monolith</title>
+  <desc id="desc">Monolith yang rapi dengan layer presentation, application, domain, dan infrastructure.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#dce6ee" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#0f6d7a"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="#f7f9fb"/>
+  <rect width="960" height="540" rx="28" fill="url(#grid)" opacity="0.72"/>
+  <text x="72" y="78" fill="#0a4f59" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Layered Monolith</text>
+  <text x="72" y="112" fill="#637083" font-family="Segoe UI, Arial, sans-serif" font-size="16">Satu aplikasi tetap bisa rapi jika tanggung jawab tiap layer jelas.</text>
+  <rect x="210" y="150" width="540" height="320" rx="22" fill="#ffffff" stroke="#0f6d7a" stroke-width="2"/>
+  <text x="240" y="188" fill="#0a4f59" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Satu deployable application</text>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <rect x="300" y="220" width="360" height="48" rx="10" fill="#eef4f8" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="480" y="250" fill="#0a4f59" font-size="17" font-weight="700">Presentation</text>
+    <rect x="300" y="288" width="360" height="48" rx="10" fill="#eef4f8" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="480" y="318" fill="#0a4f59" font-size="17" font-weight="700">Application</text>
+    <rect x="300" y="356" width="360" height="48" rx="10" fill="#eef4f8" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="480" y="386" fill="#0a4f59" font-size="17" font-weight="700">Domain</text>
+    <rect x="300" y="424" width="360" height="48" rx="10" fill="#eef4f8" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="480" y="454" fill="#0a4f59" font-size="17" font-weight="700">Infrastructure</text>
+  </g>
+  <path d="M480 268V286M480 336V354M480 404V422" stroke="#0f6d7a" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="76" y="276" width="128" height="74" rx="14" fill="#dff3f5" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="140" y="308" fill="#0a4f59" font-size="15" font-weight="700" text-anchor="middle">Mudah</text>
+    <text x="140" y="332" fill="#637083" font-size="13" text-anchor="middle">dibangun awal</text>
+    <rect x="766" y="276" width="128" height="74" rx="14" fill="#dff3f5" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="830" y="308" fill="#0a4f59" font-size="15" font-weight="700" text-anchor="middle">Waspada</text>
+    <text x="830" y="332" fill="#637083" font-size="13" text-anchor="middle">coupling besar</text>
+  </g>
+</svg>

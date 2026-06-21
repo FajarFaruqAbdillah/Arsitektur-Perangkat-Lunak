@@ -1,0 +1,106 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}Rangkuman Arsitektur Perangkat Lunak{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Blog Rangkuman Perkuliahan</p>
+            <h1>Rangkuman Arsitektur Perangkat Lunak</h1>
+            <p class="hero-copy">
+                Materi kuliah diringkas dengan bahasa ringan, alur bercerita, dan
+                langkah-langkah praktis agar konsep arsitektur lebih mudah dipahami.
+            </p>
+            <div class="hero-actions">
+                <a class="primary-button" href="#materi">Mulai Membaca</a>
+                <a class="secondary-button" href="#alur">Lihat Alur Belajar</a>
+                <a class="secondary-button" href="https://www.umkt.ac.id/" target="_blank" rel="noopener">
+                    Kunjungi UMKT
+                </a>
+            </div>
+        </div>
+
+        <aside class="architecture-panel" aria-label="Ilustrasi lapisan arsitektur">
+            <div class="panel-header">
+                <span class="status-dot"></span>
+                <span>learning-architecture.map</span>
+            </div>
+            <div class="layer-card">Drivers</div>
+            <div class="connector"></div>
+            <div class="layer-card">Quality Attributes</div>
+            <div class="connector"></div>
+            <div class="layer-card">Patterns</div>
+            <div class="connector"></div>
+            <div class="layer-card">Visualization & Data</div>
+        </aside>
+    </section>
+
+    <section class="section intro-grid" id="alur">
+        <div>
+            <p class="eyebrow">Alur Belajar</p>
+            <h2>Dari gambaran besar sampai desain teknis</h2>
+            <p>
+                Blog ini disusun seperti perjalanan: mulai dari memahami apa itu
+                arsitektur, lalu membaca alasan desain, menilai kualitas sistem,
+                memilih pola, menggambar arsitektur, dan menata data.
+            </p>
+        </div>
+        <div class="note-list">
+            {% for note in architecture_notes %}
+                <div class="note-item">
+                    <span>0{{ forloop.counter }}</span>
+                    <p>{{ note }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section" id="materi">
+        <div class="section-heading">
+            <p class="eyebrow">Materi Kuliah</p>
+            <h2>Artikel Rangkuman</h2>
+            <p>
+                Setiap artikel dibuat sebagai cerita pendek tentang sebuah masalah,
+                lalu dipecah menjadi langkah-langkah agar pembaca tidak langsung
+                tenggelam dalam istilah teknis.
+            </p>
+        </div>
+
+        <div class="post-grid">
+            {% for post in featured_posts %}
+                <article class="post-card">
+                    <img class="post-thumb" src="{% static post.image %}" alt="{{ post.image_alt }}">
+                    <div class="post-meta">
+                        <span>{{ post.category }}</span>
+                        <span>{{ post.reading_time }}</span>
+                    </div>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.summary }}</p>
+                    <a class="post-link" href="{% url 'blog:post_detail' post.slug %}">
+                        Baca rangkuman
+                    </a>
+                </article>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section topic-section" id="topik">
+        <div>
+            <p class="eyebrow">Peta Topik</p>
+            <h2>Konsep yang akan sering muncul</h2>
+            <p>
+                Blog ini juga menautkan pembaca ke website resmi
+                <a class="inline-link" href="https://www.umkt.ac.id/" target="_blank" rel="noopener">
+                    Universitas Muhammadiyah Kalimantan Timur (UMKT)
+                </a>
+                sebagai rujukan institusi.
+            </p>
+        </div>
+        <div class="topic-cloud" aria-label="Daftar topik">
+            {% for topic in topics %}
+                <span>{{ topic }}</span>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

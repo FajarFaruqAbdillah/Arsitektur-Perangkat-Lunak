@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Diagram Modern Data Blueprint</title>
+  <desc id="desc">Alur data dari sources ke ingestion, storage, transform, consumption, dan governance.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#dce6ee" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#0f6d7a"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="#f7f9fb"/>
+  <rect width="960" height="540" rx="28" fill="url(#grid)" opacity="0.72"/>
+  <text x="72" y="78" fill="#0a4f59" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Modern Data Blueprint</text>
+  <text x="72" y="112" fill="#637083" font-family="Segoe UI, Arial, sans-serif" font-size="16">Data punya perjalanan dari sumber sampai dashboard, API, dan keputusan.</text>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <rect x="56" y="236" width="124" height="64" rx="14" fill="#ffffff" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="118" y="274" fill="#0a4f59" font-size="16" font-weight="700">Sources</text>
+    <rect x="226" y="236" width="124" height="64" rx="14" fill="#ffffff" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="288" y="274" fill="#0a4f59" font-size="16" font-weight="700">Ingestion</text>
+    <rect x="396" y="184" width="138" height="64" rx="14" fill="#ffffff" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="465" y="222" fill="#0a4f59" font-size="16" font-weight="700">Data Lake</text>
+    <rect x="396" y="314" width="138" height="64" rx="14" fill="#ffffff" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="465" y="352" fill="#0a4f59" font-size="16" font-weight="700">Warehouse</text>
+    <rect x="590" y="236" width="124" height="64" rx="14" fill="#ffffff" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="652" y="274" fill="#0a4f59" font-size="16" font-weight="700">Transform</text>
+    <rect x="760" y="236" width="144" height="64" rx="14" fill="#ffffff" stroke="#0f6d7a" stroke-width="2"/>
+    <text x="832" y="262" fill="#0a4f59" font-size="16" font-weight="700">Dashboard</text>
+    <text x="832" y="284" fill="#637083" font-size="12">ML + API</text>
+  </g>
+  <g stroke="#0f6d7a" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arrow)">
+    <path d="M180 268H226"/>
+    <path d="M350 258L396 222"/>
+    <path d="M350 278L396 342"/>
+    <path d="M534 216C558 226 574 239 590 252"/>
+    <path d="M534 346C558 332 574 307 590 284"/>
+    <path d="M714 268H760"/>
+  </g>
+  <rect x="196" y="430" width="568" height="52" rx="26" fill="#dff3f5" stroke="#0f6d7a" stroke-width="2"/>
+  <text x="480" y="462" fill="#0a4f59" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Governance: quality, access, lineage, audit</text>
+</svg>

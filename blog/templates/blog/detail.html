@@ -1,0 +1,113 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <article class="article-shell">
+        <a class="back-link" href="{% url 'blog:home' %}#materi">Kembali ke semua materi</a>
+
+        <header class="article-hero">
+            <p class="eyebrow">{{ post.category }}</p>
+            <h1>{{ post.title }}</h1>
+            <p class="hero-copy">{{ post.summary }}</p>
+            <div class="article-meta">
+                <span>{{ post.reading_time }}</span>
+                <span>{{ post.source_file }}</span>
+            </div>
+        </header>
+
+        <figure class="article-visual">
+            <img src="{% static post.image %}" alt="{{ post.image_alt }}">
+        </figure>
+
+        <section class="article-content">
+            {% for paragraph in post.intro %}
+                <p>{{ paragraph }}</p>
+            {% endfor %}
+
+            <div class="story-panel">
+                <p class="eyebrow">Cerita Singkat</p>
+                <p>{{ post.story }}</p>
+            </div>
+
+            <section class="article-section">
+                <p class="eyebrow">Step by Step</p>
+                <h2>Memahami Materi Pelan-pelan</h2>
+                <div class="step-list">
+                    {% for step in post.steps %}
+                        <div class="step-item">
+                            <span>0{{ forloop.counter }}</span>
+                            <div>
+                                <h3>{{ step.title }}</h3>
+                                <p>{{ step.body }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="article-section">
+                <p class="eyebrow">Detail Materi</p>
+                <h2>Pembahasan Lebih Dalam</h2>
+                <div class="detail-grid">
+                    {% for item in post.deep_dive %}
+                        <article class="detail-card">
+                            <h3>{{ item.title }}</h3>
+                            <p>{{ item.body }}</p>
+                        </article>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="example-panel">
+                <p class="eyebrow">Contoh Penerapan</p>
+                <h2>{{ post.example.title }}</h2>
+                <p>{{ post.example.body }}</p>
+            </section>
+
+            <section class="article-section">
+                <p class="eyebrow">Poin Penting</p>
+                <h2>Yang Perlu Diingat</h2>
+                <ul class="key-point-list">
+                    {% for point in post.key_points %}
+                        <li>{{ point }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="article-section">
+                <p class="eyebrow">Checklist Belajar</p>
+                <h2>Cek Pemahaman</h2>
+                <ul class="checklist">
+                    {% for item in post.checklist %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="takeaway-panel">
+                <p class="eyebrow">Kesimpulan</p>
+                <p>{{ post.takeaway }}</p>
+            </section>
+        </section>
+
+        <nav class="article-navigation" aria-label="Navigasi materi">
+            {% if previous_post %}
+                <a href="{% url 'blog:post_detail' previous_post.slug %}">
+                    <span>Sebelumnya</span>
+                    {{ previous_post.title }}
+                </a>
+            {% else %}
+                <span></span>
+            {% endif %}
+
+            {% if next_post %}
+                <a href="{% url 'blog:post_detail' next_post.slug %}">
+                    <span>Selanjutnya</span>
+                    {{ next_post.title }}
+                </a>
+            {% endif %}
+        </nav>
+    </article>
+{% endblock %}
