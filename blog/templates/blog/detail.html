@@ -77,13 +77,23 @@
             </section>
 
             <section class="article-section">
-                <p class="eyebrow">Checklist Belajar</p>
+                <p class="eyebrow">Quiz Singkat</p>
                 <h2>Cek Pemahaman</h2>
-                <ul class="checklist">
-                    {% for item in post.checklist %}
-                        <li>{{ item }}</li>
+                <div class="quiz-list">
+                    {% for item in post.quiz %}
+                        <article class="quiz-card" data-correct="{{ item.answer }}">
+                            <p class="quiz-question">{{ forloop.counter }}. {{ item.question }}</p>
+                            <div class="quiz-options">
+                                {% for option in item.options %}
+                                    <button class="quiz-option" type="button" data-answer="{{ option }}" aria-pressed="false">
+                                        {{ option }}
+                                    </button>
+                                {% endfor %}
+                            </div>
+                            <p class="quiz-feedback" aria-live="polite"></p>
+                        </article>
                     {% endfor %}
-                </ul>
+                </div>
             </section>
 
             <section class="takeaway-panel">
@@ -110,4 +120,5 @@
             {% endif %}
         </nav>
     </article>
+    <script src="{% static 'blog/quiz.js' %}" defer></script>
 {% endblock %}

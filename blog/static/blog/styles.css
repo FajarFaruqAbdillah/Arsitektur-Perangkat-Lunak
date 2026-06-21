@@ -473,32 +473,78 @@ p {
     line-height: 1.75;
 }
 
-.checklist {
+.quiz-list {
     display: grid;
-    gap: 12px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    gap: 14px;
 }
 
-.checklist li {
-    position: relative;
-    padding: 14px 16px 14px 44px;
+.quiz-card {
+    padding: 20px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    color: #344253;
     background: rgba(255, 255, 255, 0.72);
 }
 
-.checklist li::before {
-    position: absolute;
-    left: 16px;
-    top: 16px;
-    width: 16px;
-    height: 16px;
-    border: 2px solid var(--accent);
-    border-radius: 4px;
-    content: "";
+.quiz-question {
+    margin-bottom: 14px;
+    color: #344253;
+    font-weight: 800;
+}
+
+.quiz-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.quiz-option {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: var(--accent-dark);
+    background: var(--surface);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 800;
+    text-align: left;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.quiz-option:hover,
+.quiz-option:focus-visible {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    outline: none;
+}
+
+.quiz-option.is-selected {
+    border-color: var(--accent-dark);
+}
+
+.quiz-option.is-correct {
+    border-color: #0f7a4f;
+    color: #0d5d3d;
+    background: #e4f7ed;
+}
+
+.quiz-option.is-wrong {
+    border-color: #b94949;
+    color: #8c2f2f;
+    background: #fdeaea;
+}
+
+.quiz-feedback {
+    min-height: 24px;
+    margin: 12px 0 0;
+    font-weight: 800;
+}
+
+.quiz-feedback.is-correct {
+    color: #0d5d3d;
+}
+
+.quiz-feedback.is-wrong {
+    color: #8c2f2f;
 }
 
 .article-navigation {
@@ -591,13 +637,18 @@ p {
     .story-panel,
     .takeaway-panel,
     .example-panel,
-    .detail-card {
+    .detail-card,
+    .quiz-card {
         padding: 18px;
     }
 
     .note-item,
     .step-item {
         grid-template-columns: 1fr;
+    }
+
+    .quiz-option {
+        width: 100%;
     }
 
     .article-navigation {

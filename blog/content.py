@@ -596,6 +596,26 @@ POST_EXTRAS = {
                 "nanti mudah ditambah database atau dashboard admin."
             ),
         },
+        "quiz": [
+            {
+                "question": "Apa fungsi utama arsitektur perangkat lunak?",
+                "options": [
+                    "Menentukan warna tombol aplikasi",
+                    "Melihat bentuk besar sistem dan keputusan pentingnya",
+                    "Menghapus kebutuhan dokumentasi",
+                ],
+                "answer": "Melihat bentuk besar sistem dan keputusan pentingnya",
+            },
+            {
+                "question": "Kenapa sistem perlu dipisah menjadi beberapa bagian?",
+                "options": [
+                    "Agar lebih mudah dipahami, diuji, dan diubah",
+                    "Agar semua kode wajib berada di satu file",
+                    "Agar database tidak perlu dibuat",
+                ],
+                "answer": "Agar lebih mudah dipahami, diuji, dan diubah",
+            },
+        ],
         "checklist": [
             "Apa tujuan utama sistem?",
             "Bagian apa saja yang perlu dipisahkan?",
@@ -639,6 +659,26 @@ POST_EXTRAS = {
                 "microservices mulai layak dipertimbangkan."
             ),
         },
+        "quiz": [
+            {
+                "question": "Apa itu architectural driver?",
+                "options": [
+                    "Alasan utama yang mengarahkan pilihan desain sistem",
+                    "Nama lain dari halaman login",
+                    "Daftar warna untuk tampilan website",
+                ],
+                "answer": "Alasan utama yang mengarahkan pilihan desain sistem",
+            },
+            {
+                "question": "Contoh constraint dalam arsitektur adalah...",
+                "options": [
+                    "Deadline, biaya, teknologi wajib, atau aturan keamanan",
+                    "Judul artikel yang terlalu panjang",
+                    "Ukuran font pada paragraf",
+                ],
+                "answer": "Deadline, biaya, teknologi wajib, atau aturan keamanan",
+            },
+        ],
         "checklist": [
             "Apa target bisnis terpenting?",
             "Atribut kualitas apa yang paling prioritas?",
@@ -680,6 +720,26 @@ POST_EXTRAS = {
                 "jalan, dan konflik sinkronisasi bisa diselesaikan saat koneksi pulih."
             ),
         },
+        "quiz": [
+            {
+                "question": "Quality attribute menjelaskan tentang apa?",
+                "options": [
+                    "Seberapa baik sistem bekerja dalam kondisi tertentu",
+                    "Jumlah gambar yang dipakai pada website",
+                    "Nama folder untuk menyimpan template",
+                ],
+                "answer": "Seberapa baik sistem bekerja dalam kondisi tertentu",
+            },
+            {
+                "question": "Kalau sistem harus tetap berjalan saat ada gangguan, atribut yang dibahas adalah...",
+                "options": [
+                    "Availability",
+                    "Typography",
+                    "Branding",
+                ],
+                "answer": "Availability",
+            },
+        ],
         "checklist": [
             "Apa stimulus yang memicu masalah?",
             "Bagian sistem apa yang terkena dampak?",
@@ -722,6 +782,26 @@ POST_EXTRAS = {
                 "RabbitMQ untuk diproses worker."
             ),
         },
+        "quiz": [
+            {
+                "question": "Apa tujuan utama C4 Model?",
+                "options": [
+                    "Menjelaskan sistem bertahap dari konteks sampai detail",
+                    "Mengganti semua kode menjadi diagram",
+                    "Membuat database otomatis",
+                ],
+                "answer": "Menjelaskan sistem bertahap dari konteks sampai detail",
+            },
+            {
+                "question": "Agar diagram mudah dipahami, setiap panah sebaiknya diberi...",
+                "options": [
+                    "Label komunikasi seperti HTTPS, event, atau read/write DB",
+                    "Warna acak tanpa arti",
+                    "Nomor halaman PDF",
+                ],
+                "answer": "Label komunikasi seperti HTTPS, event, atau read/write DB",
+            },
+        ],
         "checklist": [
             "Apakah aktor sudah jelas?",
             "Apakah batas sistem sudah digambar?",
@@ -763,6 +843,26 @@ POST_EXTRAS = {
                 "content.py menyimpan materi, dan static files mengurus CSS serta gambar."
             ),
         },
+        "quiz": [
+            {
+                "question": "Apa manfaat layered architecture?",
+                "options": [
+                    "Membagi tanggung jawab sistem ke lapisan yang jelas",
+                    "Mencampur semua logika ke template",
+                    "Menghilangkan kebutuhan testing",
+                ],
+                "answer": "Membagi tanggung jawab sistem ke lapisan yang jelas",
+            },
+            {
+                "question": "Monolith modular berarti...",
+                "options": [
+                    "Satu aplikasi, tetapi modul dan batas fiturnya tetap rapi",
+                    "Satu file berisi semua fitur",
+                    "Setiap tombol menjadi service terpisah",
+                ],
+                "answer": "Satu aplikasi, tetapi modul dan batas fiturnya tetap rapi",
+            },
+        ],
         "checklist": [
             "Apakah setiap layer punya tanggung jawab jelas?",
             "Apakah domain logic bebas dari detail tampilan?",
@@ -805,6 +905,26 @@ POST_EXTRAS = {
                 "settlement saldo diproses worker secara bertahap."
             ),
         },
+        "quiz": [
+            {
+                "question": "Apa fungsi queue pada arsitektur kinerja tinggi?",
+                "options": [
+                    "Menahan lonjakan pekerjaan agar bisa diproses bertahap",
+                    "Menghapus semua request dari pengguna",
+                    "Mengubah tampilan website menjadi gelap",
+                ],
+                "answer": "Menahan lonjakan pekerjaan agar bisa diproses bertahap",
+            },
+            {
+                "question": "Pekerjaan berat sebaiknya dibuat async ketika...",
+                "options": [
+                    "Tidak harus selesai langsung di request utama",
+                    "Harus selalu memblokir halaman pengguna",
+                    "Tidak punya hubungan dengan performa",
+                ],
+                "answer": "Tidak harus selesai langsung di request utama",
+            },
+        ],
         "checklist": [
             "Apakah endpoint kritis punya rate limit?",
             "Apakah pekerjaan berat bisa dibuat async?",
@@ -847,6 +967,26 @@ POST_EXTRAS = {
                 "analitik untuk dashboard penjualan."
             ),
         },
+        "quiz": [
+            {
+                "question": "Apa perbedaan sederhana operational data dan analytical data?",
+                "options": [
+                    "Operational untuk transaksi harian, analytical untuk laporan dan analisis",
+                    "Operational hanya untuk gambar, analytical hanya untuk CSS",
+                    "Keduanya selalu sama dan tidak perlu dibedakan",
+                ],
+                "answer": "Operational untuk transaksi harian, analytical untuk laporan dan analisis",
+            },
+            {
+                "question": "Governance data membantu memastikan...",
+                "options": [
+                    "Data jelas pemiliknya, aksesnya, asalnya, dan kualitasnya",
+                    "Semua orang bebas melihat data sensitif",
+                    "Data tidak perlu dibersihkan",
+                ],
+                "answer": "Data jelas pemiliknya, aksesnya, asalnya, dan kualitasnya",
+            },
+        ],
         "checklist": [
             "Apa saja sumber data utama?",
             "Data mana yang butuh real-time?",

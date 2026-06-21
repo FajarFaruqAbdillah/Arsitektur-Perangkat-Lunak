@@ -19,3 +19,6 @@ class BlogHomeTests(SimpleTestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Quality Attributes")
+        self.assertContains(response, "Quiz Singkat")
+        self.assertContains(response, "data-correct")
+        self.assertContains(response, "blog/quiz.js")
