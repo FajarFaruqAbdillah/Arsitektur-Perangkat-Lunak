@@ -8,7 +8,7 @@ class BlogHomeTests(SimpleTestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Rangkuman Arsitektur Perangkat Lunak")
-        self.assertContains(response, "Tentang Penulis")
+        self.assertContains(response, "Cerita Penulis")
 
     def test_detail_page_loads(self):
         response = self.client.get(
@@ -32,5 +32,6 @@ class BlogHomeTests(SimpleTestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Tentang Penulis")
+        self.assertContains(response, "Foto Fajar")
         self.assertContains(response, "data pipeline")
         self.assertContains(response, "trade-off")

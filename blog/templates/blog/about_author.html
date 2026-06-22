@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+{% load static %}
 
 {% block title %}Tentang Penulis{% endblock %}
 {% block meta_description %}Perjalanan penulis blog dalam memahami Arsitektur Perangkat Lunak, mulai dari bingung dengan istilah arsitektur sampai memilih tema penelitian data pipeline.{% endblock %}
@@ -8,13 +9,19 @@
         <a class="back-link" href="{% url 'blog:home' %}">Kembali ke beranda</a>
 
         <header class="author-hero">
-            <p class="eyebrow">Tentang Penulis</p>
-            <h1>Belajar arsitektur itu pelan-pelan, tapi lama-lama polanya terlihat.</h1>
-            <p class="hero-copy">
-                Blog ini lahir dari perjalanan belajar di mata kuliah Arsitektur Perangkat Lunak:
-                dari awalnya hanya melihat software sebagai kumpulan kode, sampai mulai memahami
-                bahwa setiap keputusan desain selalu punya alasan dan konsekuensi.
-            </p>
+            <div class="author-hero-copy">
+                <p class="eyebrow">Tentang Penulis</p>
+                <h1>Belajar arsitektur itu pelan-pelan, tapi lama-lama polanya terlihat.</h1>
+                <p class="hero-copy">
+                    Blog ini lahir dari perjalanan belajar di mata kuliah Arsitektur Perangkat Lunak:
+                    dari awalnya hanya melihat software sebagai kumpulan kode, sampai mulai memahami
+                    bahwa setiap keputusan desain selalu punya alasan dan konsekuensi.
+                </p>
+            </div>
+            <figure class="author-photo-card">
+                <img src="{% static 'blog/images/Foto Fajar.jpg' %}" alt="Foto Fajar Faruq Abdillah, penulis blog.">
+                <figcaption>Fajar Faruq Abdillah, penulis catatan arsitektur.</figcaption>
+            </figure>
         </header>
 
         <section class="author-story">

@@ -376,9 +376,42 @@ p {
     padding: 38px 0 42px;
 }
 
+.author-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 310px);
+    gap: 28px;
+    align-items: end;
+}
+
 .article-hero h1,
 .author-hero h1 {
     font-size: 4.2rem;
+}
+
+.author-photo-card {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.author-photo-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 6px;
+    object-fit: cover;
+    object-position: center 42%;
+}
+
+.author-photo-card figcaption {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1.5;
 }
 
 .article-meta {
@@ -698,8 +731,13 @@ p {
 
     .author-story,
     .author-timeline,
-    .author-note-grid {
+    .author-note-grid,
+    .author-hero {
         grid-template-columns: 1fr;
+    }
+
+    .author-photo-card {
+        max-width: 360px;
     }
 }
 
@@ -729,8 +767,13 @@ p {
     .quiz-card,
     .author-card,
     .author-map,
+    .author-photo-card,
     .research-bridge {
         padding: 18px;
+    }
+
+    .author-photo-card {
+        max-width: none;
     }
 
     .note-item,
