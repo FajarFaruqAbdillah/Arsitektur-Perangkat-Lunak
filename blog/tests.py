@@ -8,6 +8,7 @@ class BlogHomeTests(SimpleTestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Rangkuman Arsitektur Perangkat Lunak")
+        self.assertContains(response, "Tentang Penulis")
 
     def test_detail_page_loads(self):
         response = self.client.get(
@@ -21,4 +22,15 @@ class BlogHomeTests(SimpleTestCase):
         self.assertContains(response, "Quality Attributes")
         self.assertContains(response, "Quiz Singkat")
         self.assertContains(response, "data-correct")
-        self.assertContains(response, "blog/quiz.js")
+        self.assertRegex(
+            response.content.decode(),
+            r"/static/blog/quiz(\.[a-f0-9]+)?\.js",
+        )
+
+    def test_about_author_page_loads(self):
+        response = self.client.get(reverse("blog:about_author"))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Tentang Penulis")
+        self.assertContains(response, "data pipeline")
+        self.assertContains(response, "trade-off")

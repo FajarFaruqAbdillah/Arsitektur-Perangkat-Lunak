@@ -14,6 +14,10 @@ def home(request):
     return render(request, "blog/index.html", context)
 
 
+def about_author(request):
+    return render(request, "blog/about_author.html")
+
+
 def post_detail(request, slug):
     for index, post in enumerate(POSTS):
         if post["slug"] == slug:

@@ -364,17 +364,20 @@ p {
     background: var(--surface);
 }
 
-.article-shell {
+.article-shell,
+.author-shell {
     max-width: 900px;
     margin: 0 auto;
     padding: 54px 0 96px;
 }
 
-.article-hero {
+.article-hero,
+.author-hero {
     padding: 38px 0 42px;
 }
 
-.article-hero h1 {
+.article-hero h1,
+.author-hero h1 {
     font-size: 4.2rem;
 }
 
@@ -429,6 +432,83 @@ p {
 
 .article-section {
     padding-top: 18px;
+}
+
+.author-story {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+    gap: 22px;
+    align-items: stretch;
+    margin-bottom: 28px;
+}
+
+.author-map {
+    display: grid;
+    gap: 12px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        repeating-linear-gradient(0deg, transparent 0, transparent 30px, rgba(15, 109, 122, 0.08) 31px);
+}
+
+.author-map span {
+    position: relative;
+    padding: 14px 16px 14px 42px;
+    border: 1px solid rgba(15, 109, 122, 0.2);
+    border-radius: 8px;
+    color: var(--accent-dark);
+    font-weight: 800;
+    background: var(--surface);
+}
+
+.author-map span::before {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--accent);
+    content: "";
+}
+
+.author-timeline,
+.author-note-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.author-card {
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.author-card span {
+    display: inline-flex;
+    margin-bottom: 16px;
+    color: var(--accent);
+    font-size: 0.86rem;
+    font-weight: 800;
+}
+
+.author-card p {
+    margin-bottom: 0;
+}
+
+.research-bridge {
+    padding: 28px;
+    border: 1px solid rgba(15, 109, 122, 0.22);
+    border-radius: 8px;
+    background: var(--accent-soft);
+}
+
+.research-bridge p:last-child {
+    margin-bottom: 0;
 }
 
 .detail-grid {
@@ -611,8 +691,15 @@ p {
         order: -1;
     }
 
-    .article-hero h1 {
+    .article-hero h1,
+    .author-hero h1 {
         font-size: 3.2rem;
+    }
+
+    .author-story,
+    .author-timeline,
+    .author-note-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -623,7 +710,8 @@ p {
     }
 
     h1,
-    .article-hero h1 {
+    .article-hero h1,
+    .author-hero h1 {
         font-size: 2.55rem;
     }
 
@@ -638,7 +726,10 @@ p {
     .takeaway-panel,
     .example-panel,
     .detail-card,
-    .quiz-card {
+    .quiz-card,
+    .author-card,
+    .author-map,
+    .research-bridge {
         padding: 18px;
     }
 

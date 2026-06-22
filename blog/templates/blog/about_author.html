@@ -1,0 +1,153 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Tentang Penulis{% endblock %}
+{% block meta_description %}Perjalanan penulis blog dalam memahami Arsitektur Perangkat Lunak, mulai dari bingung dengan istilah arsitektur sampai memilih tema penelitian data pipeline.{% endblock %}
+
+{% block content %}
+    <article class="author-shell">
+        <a class="back-link" href="{% url 'blog:home' %}">Kembali ke beranda</a>
+
+        <header class="author-hero">
+            <p class="eyebrow">Tentang Penulis</p>
+            <h1>Belajar arsitektur itu pelan-pelan, tapi lama-lama polanya terlihat.</h1>
+            <p class="hero-copy">
+                Blog ini lahir dari perjalanan belajar di mata kuliah Arsitektur Perangkat Lunak:
+                dari awalnya hanya melihat software sebagai kumpulan kode, sampai mulai memahami
+                bahwa setiap keputusan desain selalu punya alasan dan konsekuensi.
+            </p>
+        </header>
+
+        <section class="author-story">
+            <div class="story-panel">
+                <p class="eyebrow">Awal Cerita</p>
+                <h2>Dulu, kata arsitektur terdengar terlalu besar</h2>
+                <p>
+                    Di awal perkuliahan, arsitektur perangkat lunak terasa seperti istilah yang
+                    jauh dan berat. Yang terbayang hanya diagram kotak-kotak, panah, dan banyak
+                    istilah teknis yang sulit diingat. Saat itu, saya lebih mudah memahami
+                    software sebagai sesuatu yang penting "bisa jalan" dulu.
+                </p>
+                <p>
+                    Tetapi setelah masuk ke materi demi materi, saya mulai sadar bahwa sistem
+                    yang baik tidak cukup hanya berjalan. Sistem juga perlu mudah dirawat,
+                    aman, bisa tumbuh, dan tetap masuk akal ketika fiturnya makin banyak.
+                </p>
+            </div>
+
+            <div class="author-map" aria-label="Peta perjalanan belajar penulis">
+                <span>tidak paham</span>
+                <span>mengenal istilah</span>
+                <span>membaca trade-off</span>
+                <span>memilih data pipeline</span>
+            </div>
+        </section>
+
+        <section class="article-section">
+            <p class="eyebrow">Perjalanan Belajar</p>
+            <h2>Dari bingung istilah sampai mulai melihat keputusan desain</h2>
+            <div class="author-timeline">
+                <article class="author-card">
+                    <span>01</span>
+                    <h3>Mulai dari pertanyaan paling dasar</h3>
+                    <p>
+                        Pertanyaan pertama saya sederhana: sebenarnya arsitektur perangkat
+                        lunak itu apa? Dari situ saya belajar bahwa arsitektur bukan cuma
+                        gambar, tetapi cara melihat bagian besar sistem, hubungan antarbagian,
+                        dan alasan kenapa sistem disusun seperti itu.
+                    </p>
+                </article>
+
+                <article class="author-card">
+                    <span>02</span>
+                    <h3>Masuk ke istilah yang awalnya asing</h3>
+                    <p>
+                        Pelan-pelan, istilah seperti monolith, layered architecture,
+                        microservice, event-driven, API, queue, dan scalability mulai terasa
+                        lebih dekat. Awalnya terdengar seperti daftar kata sulit, tetapi lama-lama
+                        terlihat bahwa semua istilah itu muncul karena ada masalah nyata yang
+                        ingin diselesaikan.
+                    </p>
+                </article>
+
+                <article class="author-card">
+                    <span>03</span>
+                    <h3>Belajar bahwa tidak ada desain yang selalu paling benar</h3>
+                    <p>
+                        Bagian yang paling membuka cara berpikir saya adalah trade-off.
+                        Microservice bisa membantu skalabilitas dan pemisahan tim, tetapi
+                        membuat deployment, komunikasi data, dan monitoring lebih rumit.
+                        Monolith lebih sederhana untuk memulai, tetapi perlu batas modul yang
+                        rapi agar tidak berubah menjadi sistem yang sulit disentuh.
+                    </p>
+                </article>
+
+                <article class="author-card">
+                    <span>04</span>
+                    <h3>Mulai menghubungkan materi dengan penelitian</h3>
+                    <p>
+                        Dari pembahasan data, integrasi, dan alur informasi, saya tertarik
+                        pada tema data pipeline. Di sana arsitektur terasa sangat nyata:
+                        bagaimana data dikumpulkan, diproses, disimpan, dijaga kualitasnya,
+                        lalu disajikan untuk membantu pengambilan keputusan.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="research-bridge">
+            <p class="eyebrow">Arah Penelitian</p>
+            <h2>Kenapa data pipeline terasa cocok?</h2>
+            <p>
+                Data pipeline punya hubungan erat dengan arsitektur perangkat lunak karena
+                di dalamnya ada banyak keputusan desain: kapan data diproses batch atau
+                streaming, bagaimana menjaga kualitas data, bagaimana sistem tetap kuat saat
+                volume data bertambah, dan bagaimana data sensitif tetap aman.
+            </p>
+            <p>
+                Dari sini saya belajar bahwa penelitian bukan sekadar memilih topik yang
+                terdengar keren. Topik yang baik adalah topik yang bisa dijelaskan hubungannya
+                dengan masalah nyata, keputusan teknis, dan manfaat bagi pengguna.
+            </p>
+        </section>
+
+        <section class="article-section">
+            <p class="eyebrow">Catatan Untuk Pembaca</p>
+            <h2>Kalau sekarang masih bingung, itu bagian dari proses</h2>
+            <div class="author-note-grid">
+                <div class="detail-card">
+                    <h3>Mulai dari cerita sistem</h3>
+                    <p>
+                        Jangan langsung takut dengan istilah. Tanyakan dulu: sistem ini dibuat
+                        untuk siapa, masalahnya apa, dan bagian mana yang paling berisiko?
+                    </p>
+                </div>
+                <div class="detail-card">
+                    <h3>Terima bahwa setiap pilihan punya konsekuensi</h3>
+                    <p>
+                        Arsitektur bukan mencari jawaban yang paling keren, tetapi memilih
+                        keputusan yang paling masuk akal untuk kondisi, kebutuhan, dan batasan
+                        yang sedang dihadapi.
+                    </p>
+                </div>
+                <div class="detail-card">
+                    <h3>Hubungkan dengan minat sendiri</h3>
+                    <p>
+                        Ketika materi mulai dikaitkan dengan minat pribadi, belajar terasa
+                        lebih hidup. Untuk saya, titik itu muncul saat melihat hubungan
+                        arsitektur dengan data pipeline.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="takeaway-panel">
+            <p class="eyebrow">Penutup</p>
+            <p>
+                Perjalanan memahami arsitektur perangkat lunak tidak terjadi dalam sekali
+                baca. Ia tumbuh dari rasa bingung, mencoba mengerti istilah, melihat contoh,
+                lalu berani bertanya: keputusan desain apa yang paling masuk akal untuk
+                masalah ini?
+            </p>
+        </section>
+    </article>
+{% endblock %}
